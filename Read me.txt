@@ -1,0 +1,49 @@
+# Employee Dashboard (Local Storage CRUD)
+
+This is a small web project where we can add, edit, view, and delete employee details.  
+I built this project using HTML, CSS, and JavaScript.  
+All the data is stored in the browser using Local Storage, so no database or backend is needed.
+
+
+## Features
+
+- Add new employees with name, position, and salary  
+- Show all employees in a table  
+- Edit employee details  
+- Delete employee details  
+- Data stays saved in the browser even after refreshing  
+- Basic form validation and clean UI  
+
+---
+
+## How It Works
+
+1. Type the employee name, position, and salary in the input fields  
+2. Click the **Add** button  
+3. The employee record will appear in the table  
+4. To update a record, click the **Edit** button  
+5. To remove a record, click the **Delete** button  
+
+---
+
+## Technologies Used
+
+- **HTML** → for structure  
+- **CSS** → for styling  
+- **JavaScript** → to perform CRUD operations and manage Local Storage  
+
+---
+
+## How to Run the Project
+
+1. Download the project or clone the repository  
+2. Open the folder  
+3. Double-click the `index.html` file to open it in the browser  
+
+No installation or server is needed.
+
+---
+
+## Author
+
+[chandru]
