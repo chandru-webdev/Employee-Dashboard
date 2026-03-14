@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  /* Changed font to a common sans-serif for a cleaner look */
+  font-family: Arial, sans-serif; 
+  transition: all 0.3s ease-in-out; /* Global transition for smoothness */
+}
+
+body {
+  background: linear-gradient(135deg, #0078ff 0%, #00c6ff 100%); /* Slightly darker gradient angle */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 10px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Deeper shadow */
+  width: 90%;
+  max-width: 900px;
+  padding: 30px; /* Slightly more padding */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.8s forwards; /* Added intro animation */
+}
+
+/* Keyframe for initial load animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #1a1a1a; /* Darker heading */
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  border-bottom: 3px solid #0078ff; /* Underline effect */
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased spacing */
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px;
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Softer border radius */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Inner shadow for depth */
+}
+
+input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 8px rgba(0, 120, 255, 0.3); /* Blue glow on focus */
+  outline: none;
+}
+
+button {
+  background-color: #0078ff;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 120, 255, 0.2); /* Shadow on main buttons */
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 120, 255, 0.3);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  min-width: 600px; /* Ensures a minimum size for mobile readability */
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px; /* More padding in table cells */
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0; /* Lighter border for clean look */
+}
+
+th {
+  background-color: #0078ff;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Subtle zebra striping */
+}
+
+tr:hover {
+  background-color: #eef7ff; /* Highlight row on hover */
+}
+
+td button {
+  margin: 3px;
+  padding: 8px 15px; /* Larger click area */
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+td .edit-btn {
+  background-color: #28a745;
+}
+
+td .delete-btn {
+  background-color: #dc3545;
+}
+
+td .edit-btn:hover {
+  background-color: #1e7e34;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+td .delete-btn:hover {
+  background-color: #b02a37;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+  }
+  .container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  th, td {
+    padding: 10px 5px;
+  }
+}
+.input-wrapper {
+  flex: 1;
+  min-width: 180px;
+  position: relative; /* Crucial for icon placement */
+}
+
+.input-wrapper input {
+  /* Ensure input takes full width of wrapper */
+  width: 100%; 
+  padding-right: 35px; /* Space for the icon */
+}
+
+.success-icon, .error-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  display: none; /* Hide by default */
+}
+
+.success-icon {
+  color: #28a745;
+}
+
+.error-icon {
+  color: #dc3545;
+}
+
+/* Styles for validated states */
+.input-wrapper.success input {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.input-wrapper.error input {
+  border-color: #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+.input-wrapper.success .success-icon {
+  display: block;
+}
+
+.input-wrapper.error .error-icon {
+  display: block;
+}
+
+/* Update form container media query for the wrapper */
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+  }
+  .input-wrapper {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+/* Animation for newly added row */
+@keyframes highlight {
+  0% { background-color: #ffc107; }
+  100% { background-color: transparent; }
+}
+
+.new-row {
+  animation: highlight 1.5s ease-out;
+}
+
+/* Ensure the hover effect overrides the animation start color */
+.new-row:hover {
+  background-color: #eef7ff !important; 
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Employee Dashboard</h1>
+    
+   <div class="form-container">
+    <div class="input-wrapper">
+      <input type="text" id="name" placeholder="Enter Employee Name">
+      <i class="fas fa-check-circle success-icon"></i>
+      <i class="fas fa-times-circle error-icon"></i>
+    </div>
+    <div class="input-wrapper">
+      <input type="text" id="position" placeholder="Enter Position">
+      <i class="fas fa-check-circle success-icon"></i>
+      <i class="fas fa-times-circle error-icon"></i>
+    </div>
+    <div class="input-wrapper">
+      <input type="number" id="salary" placeholder="Enter Salary">
+      <i class="fas fa-check-circle success-icon"></i>
+      <i class="fas fa-times-circle error-icon"></i>
+    </div>
+    
+    <button id="addBtn" onclick="addEmployee()">Add</button>
+    <button id="updateBtn" style="display:none;" onclick="updateEmployee()">Update</button>
+</div>
+
+    <div class="table-wrapper">
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
