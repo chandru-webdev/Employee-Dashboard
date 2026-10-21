@@ -13,37 +13,4 @@ The Employee Dashboard helps visualize basic employee information in a structure
 
 The project is built using pure frontend technologies without frameworks, making it lightweight and beginner-friendly for learning web development.
 
-✨ Features
-📊 Dashboard Cards
 
-👥 Display Total Employees
-
-💰 Display Average Salary
-
-🏆 Display Highest Salary
-
-📋 Employee Table
-
-Shows employee details clearly
-
-Organized structure for easy reading
-
-📱 Responsive Design
-
-Works on desktop, tablet, and mobile
-
-🎨 Clean UI
-
-Simple layout
-
-Easy navigation
-
-User-friendly interface
-
-🛠️ Technologies Used
-
-🌐 HTML5 – Structure of the webpage
-
-🎨 CSS3 – Styling and layout
-
-⚡ JavaScript (Vanilla JS) – Dynamic data handling and calculations
